@@ -13,9 +13,6 @@
         <header>
             <div class="weather__input">
                 <input type="text" placeholder="Search for a Location..." class="location_input" id="input">
-                <!-- <form id="demo-2">
-                    <input type="search" placeholder="Search">
-                </form> -->
             </div>
         </header>
         <div class="weather__icon-condition">
@@ -26,7 +23,7 @@
             <h3 class="date">Monday August 8</h3>
         </div>
         <div class="weather__temp">
-            <h4 class="temp">73°F</h4>
+            <h4 class="temp" id="temp-main">73</h4><span id="unit-main">°F</span>
         </div>
         <div class="weather__location">
             <h5 class="location">Los Angeles, US</h5>
@@ -34,51 +31,54 @@
     </div>
 
     <div class="forcast">
-        <h6 class="forcast__title">Next few hours</h6>
+        <div class="forcast__top">
+            <h6 class="forcast__title">Next few hours</h6>
+            <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+        </div>
         <div class="forcast__entry">
             <span class="left" id="hour-0">3</span>:<span class="right" id="day-0">00 p.m.</span>
-            <!-- <p class="time">3:00 p.m.</p> -->
-            <p class="temp">67</p><span>°F</span>
+            <p class="temp" id="temp-0">70</p><span id="unit-0">°F</span>
             <i class="wi wi-owm-801" id="icon-forcast-0"></i>
         </div>
         <div class="forcast__entry">
             <span class="left" id="hour-1">6</span>:<span class="right" id="day-1">00 p.m.</span>
-            <!-- <p class="time">6:00 p.m.</p> -->
-            <p class="temp">62</p><span>°F</span>
+            <p class="temp 1" id="temp-1">62</p><span id="unit-1">°F</span>
             <i class="wi wi-owm-801" id="icon-forcast-1"></i>
         </div>
         <div class="forcast__entry">
             <span class="left" id="hour-2">9</span>:<span class="right" id="day-2">00 p.m.</span>
-            <!-- <p class="time">9:00 p.m.</p> -->
-            <p class="temp">57</p><span>°F</span>
+            <p class="temp 2" id="temp-2">57</p><span id="unit-2">°F</span>
             <i class="wi wi-owm-801" id="icon-forcast-2"></i>
         </div>
         <div class="forcast__entry">
             <span class="left" id="hour-3">12</span>:<span class="right" id="day-3">00 a.m.</span>
-            <!-- <p class="time">12:00 a.m.</p> -->
-            <p class="temp">52</p><span>°F</span>
+            <p class="temp 3" id="temp-3">52</p><span id="unit-3">°F</span>
             <i class="wi wi-owm-801" id="icon-forcast-3"></i>
         </div>
         <div class="forcast__entry">
             <span class="left" id="hour-4">3</span>:<span class="right" id="day-4">00 a.m.</span>
-            <!-- <p class="time">3:00 a.m.</p> -->
-            <p class="temp">52</p><span>°F</span>
+            <p class="temp" id="temp-4">52</p><span id="unit-4">°F</span>
             <i class="wi wi-owm-801" id="icon-forcast-4"></i>
         </div>
         <div class="forcast__entry">
             <span class="left" id="hour-5">6</span>:<span class="right" id="day-5">00 a.m.</span>
-            <!-- <p class="time">6:00 a.m.</p> -->
-            <p class="temp">54</p><span>°F</span>
+            <p class="temp" id="temp-5">54</p><span id="unit-5">°F</span>
             <i class="wi wi-owm-801" id="icon-forcast-5"></i>
         </div>
         <div class="forcast__entry">
             <span class="left" id="hour-6">9</span>:<span class="right" id="day-6">00 a.m.</span>
-            <!-- <p class="time">9:00 a.m.</p> -->
-            <p class="temp">60</p><span>°F</span>
+            <p class="temp" id="temp-6">60</p><span id="unit-6">°F</span>
             <i class="wi wi-owm-801" id="icon-forcast-6"></i>
         </div>
     </div>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

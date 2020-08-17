@@ -4,17 +4,6 @@
     box-sizing: border-box;
 }
 
-/* .weather {
-    background-image: url(./images/day.png);
-    background-size: cover;
-    font-family: 'Overpass', sans-serif;
-    display: flex;
-    /* justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-} */
-
 @media only screen and (max-width: 480px) {
 
     body {
@@ -66,7 +55,6 @@
     }
 
     .weather__icon-condition {
-        /* padding-top: 50px; */
         padding-bottom: 10px;
         display: flex;
         justify-content: center;
@@ -81,7 +69,6 @@
     }
 
     .weather__condition {
-        /* display: flex; */
         justify-content: center;
         align-items: center;
         align-self: center;
@@ -89,29 +76,24 @@
     }
 
     .weather__date {
-        /* display: flex; */
-        /* justify-content: center; */
         font-size: 12px;
         font-weight: lighter;
         margin: 0 -1em;
     }
 
     .weather__temp {
-        /* display: flex; */
+        display: flex;
         font-size: 100px;
         text-shadow: 2px 10px #005e83;
         margin: 0 -1em;
-        /* justify-content: center; */
     }
 
     .weather__location {
-        /* display: flex; */
         margin: 0 -1em;
-        /* justify-content: center; */
     }
 
     .forcast__title {
-        margin-top: 100px;
+        margin-top: 70px;
         margin-left: 20px;
         font-size: 25px;
     }
@@ -120,13 +102,13 @@
         display: flex;
         margin-top: 15px;
         align-items: flex-start;
-        /* justify-content: space-evenly; */
         font-size: 18px;
+        font-weight: 900;
         color: #ffffff;
     }
 
     .forcast__entry .temp {
-        padding-left: 50px;
+        margin-left: auto;
         margin-right: 0px;
     }
 
@@ -143,79 +125,72 @@
     }
 
     .forcast__entry i {
+        font-weight: 900;
         position: relative;
-        top: 0px;
-        left: 5px;
-    }
-
-    /* input {
-        outline: none;
-    }
-    input[type=search] {
-        -webkit-appearance: textfield;
-        -webkit-box-sizing: content-box;
-        font-family: inherit;
-        font-size: 100%;
-    }
-    input::-webkit-search-decoration,
-    input::-webkit-search-cancel-button {
-        display: none; 
-    }
-
-    input[type=search] {
-        background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
-        border: solid 1px #ccc;
-        padding: 9px 10px 9px 32px;
-        width: 55px;
-        
-        -webkit-border-radius: 10em;
-        -moz-border-radius: 10em;
-        border-radius: 10em;
-        
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        transition: all .5s;
-    }
-    input[type=search]:focus {
-        width: 130px;
-        background-color: #fff;
-        border-color: #66CC75;
-        
-        -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-        -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-        box-shadow: 0 0 5px rgba(109,207,246,.5);
+        top: 2px;
+        left: 6px;
+        margin-right: auto;
     }
     
-    
-    input:-moz-placeholder {
-        color: #999;
-    }
-    input::-webkit-input-placeholder {
-        color: #999;
+    .forcast__top {
+        display: flex;
     }
 
-    #demo-2 input[type=search] {
-        width: 15px;
-        padding-left: 10px;
-        color: transparent;
-        cursor: pointer;
+    .onoffswitch {
+        position: relative;
+        padding-top: 70px;
+        padding-right: 20px;
+        margin-left: auto;
+        width: 120px;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select: none;
     }
-    #demo-2 input[type=search]:hover {
-        background-color: #fff;
+    .onoffswitch-checkbox {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
     }
-    #demo-2 input[type=search]:focus {
-        width: 130px;
-        padding-left: 32px;
-        color: #000;
-        background-color: #fff;
-        cursor: auto;
+    .onoffswitch-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: 2px solid #000000; border-radius: 20px;
     }
-    #demo-2 input:-moz-placeholder {
-        color: transparent;
+    .onoffswitch-inner {
+        display: block; width: 200%; margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
     }
-    #demo-2 input::-webkit-input-placeholder {
-        color: transparent;
-    } */
-
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+        font-size: 21px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        box-sizing: border-box;
+    }
+    .onoffswitch-inner:before {
+        content: "°F";
+        padding-left: 25px;
+        background-color: #E48E1E; color: #FFFFFF;
+    }
+    .onoffswitch-inner:after {
+        content: "°C";
+        padding-right: 25px;
+        background-color: #005E83; color: #FFFFFF;
+        text-align: right;
+    }
+    .onoffswitch-switch {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        background: #CFCFCF;
+        position: absolute;
+        right: 85px;
+        border: 2px solid #000000; border-radius: 20px;
+        transition: all 0.3s ease-in 0s; 
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 25px; 
+    }
 
 }
