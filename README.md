@@ -24,5 +24,7 @@ This was all built using HTML, CSS, and Vanilia JavaScript.
 Connected with two API services 
   - OpenWeatherMap
   - Google Time Zone
+  
 Found online the toggle switch for the units
+
 Used the libary Sweetalert.js to customize when the user gives a invaild search result.
