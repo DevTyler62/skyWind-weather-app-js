@@ -20,6 +20,7 @@ search parameters was to use latitude and longitude coordinets which the weather
 time of day the location the user searched for and then was able to change the background accordinly.
 
 This was all built using HTML, CSS, and Vanilia JavaScript.
+
 Connected with two API services 
   - OpenWeatherMap
   - Google Time Zone
