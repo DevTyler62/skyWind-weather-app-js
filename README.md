@@ -21,6 +21,10 @@ time of day the location the user searched for and then was able to change the b
 
 This was all built using HTML, CSS, and Vanilia JavaScript.
 
+The site was built to get more familiar with Mobile styles. When viewing the site in order to view it with the styles, you will either need to be on a mobile device or open up the dev tools to view it on a smaller screen size.
+
+Live site can be found here: https://skywind.netlify.app
+
 Connected with two API services 
   - OpenWeatherMap
   - Google Time Zone
